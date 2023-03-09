@@ -1,0 +1,20 @@
+version: '3'
+services:
+  directus:
+    image: directus/directus:latest
+    ports:
+      - 8055:8055
+    volumes:
+      - /directus/uploads
+      - /directus/database
+    environment:
+      KEY: '${DIRECTUS_KEY}'
+      SECRET: '${DIRECTUS_SECRET}'
+
+      DB_CLIENT: 'sqlite3'
+      DB_FILENAME: './database/data.db'
+
+      CACHE_ENABLED: true
+
+      ADMIN_EMAIL: 'aaronlockhartdev@gmail.com'
+      ADMIN_PASSWORD: '${DIRECTUS_PASSWORD}'
