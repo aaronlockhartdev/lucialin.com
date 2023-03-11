@@ -10,13 +10,7 @@
   </div>
 </template>
 
-<style lang='sass'>
-  body
-    background: rgba(0,0,0,0.4) url('~/assets/img/home-lg.jpg') no-repeat
-    background-blend-mode: darken
-    background-position: center top
-    background-size: cover
-
+<style scoped lang='sass'>
   #title
     position: absolute
     top: 40vh
@@ -35,7 +29,7 @@
       font-style: normal
       font-weight: 400
       font-size: 5rem
-      letter-spacing: 0.8rem
+      letter-spacing: 0.5rem
 
       color: white
 
@@ -44,7 +38,7 @@
 
       text-transform: uppercase
 
-      font-family: "Helvetica Neue", Robot, sans-serif
+      font-family: "Helvetica Neue", Roboto, sans-serif
       font-style: normal
       font-weight: 400
       font-size: 1rem
@@ -59,3 +53,13 @@
 
 </style>
 
+<script lang='ts'>
+  export default {
+    mounted() {
+      document.body.style.background = "rgba(0,0,0,0.4) url('/img/home-lg.jpg') no-repeat"
+      document.body.style.backgroundBlendMode = "darken"
+      document.body.style.backgroundPosition = "center top"
+      document.body.style.backgroundSize = "cover"
+    }
+  }
+</script>
